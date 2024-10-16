@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">
+                <img src="logo.png" alt="Pet Marketplace Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#adopt">Adopt Pets</a></li>
+                <li><a href="#supplies">Pet Supplies</a></li>
+                <li><a href="#care">Pet Care</a></li>
+                <li><a href="#breeds">Animal Breeds</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to Pet Marketplace</h1>
+                <p>Find your perfect companion and everything they need</p>
+                <a href="#adopt" class="cta-button">Explore Now</a>
+            </div>
+        </section>
+    </main>
+
+    <section id="adopt-pets">
+        <h2>Adopt a Pet</h2>
+        <div class="filter-container">
+            <input type="text" id="pet-search" placeholder="Search pets...">
+            <select id="pet-type">
+                <option value="">All Types</option>
+                <option value="dog">Dogs</option>
+                <option value="cat">Cats</option>
+                <option value="bird">Birds</option>
+                <option value="other">Other</option>
+            </select>
+            <select id="pet-age">
+                <option value="">All Ages</option>
+                <option value="young">Young</option>
+                <option value="adult">Adult</option>
+                <option value="senior">Senior</option>
+            </select>
+        </div>
+        <div id="pet-list" class="pet-grid">
+            <!-- Pet cards will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <section id="pet-supplies">
+        <div class="section-header">
+            <h2>Pet Supplies & Products</h2>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+        <div class="product-filters">
+            <input type="text" id="product-search" placeholder="Search products...">
+            <select id="product-category">
+                <option value="">All Categories</option>
+                <option value="food">Food</option>
+                <option value="toys">Toys</option>
+                <option value="accessories">Accessories</option>
+            </select>
+        </div>
+        <div id="product-list" class="product-grid">
+            <!-- Product cards will be dynamically inserted here -->
+        </div>
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Your Cart</h3>
+                <div id="cart-items"></div>
+                <div id="cart-total"></div>
+                <button id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pet-care">
+        <div class="section-header">
+            <h2>Pet Care Information</h2>
+        </div>
+        <div class="pet-care-container">
+            <div class="pet-selector">
+                <label for="animal-type">Select Animal Type:</label>
+                <select id="animal-type">
+                    <option value="">Choose an animal</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="fish">Fish</option>
+                </select>
+                <label for="breed-select">Select Breed:</label>
+                <select id="breed-select" disabled>
+                    <option value="">Choose a breed</option>
+                </select>
+            </div>
+            <div id="pet-info" class="pet-info-display">
+                <h3>Select an animal type and breed to view care information</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="animal-breeds-directory">
+        <div class="section-header">
+            <h2>Animal & Breeds Directory</h2>
+        </div>
+        <div class="directory-container">
+            <div class="animal-list">
+                <h3>Animal Species</h3>
+                <ul id="animal-species-list">
+                    <!-- Animal species will be dynamically inserted here -->
+                </ul>
+            </div>
+            <div class="breed-list">
+                <h3>Breeds</h3>
+                <ul id="breed-list">
+                    <!-- Breeds will be dynamically inserted here -->
+                </ul>
+            </div>
+            <div class="animal-info">
+                <div id="animal-details">
+                    <!-- Animal details will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <p>&copy; 2024 Pet Marketplace. All rights reserved.</p>
+            <form class="newsletter-signup">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
